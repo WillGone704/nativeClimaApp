@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+</head>
+
+<body>
+    <aside>
+        <a href="https://github.com/WillGone704" target="_blank"><img src="./assets/github_default_icon.png" id="github-icon" title="View the Source Code"/></a>
+        <a href="https://www.linkedin.com/in/wilberto-gonzalez-rodriguez-247090175" target="_blank"><img src="./assets/linkedin_default_icon.png" id="linkedin-icon" title="Visit my Linkedin Profile"/></a>
+        <a href="https://dev.to/willgone704" target="_blank"><img src="./assets/dev_default_icon.png" id="dev-icon" title="Read my Posts"/></a>
+        <a href="https://willgone704.github.io/portafolio" target="_blank"><img src="./assets/portafolio_default_icon.png" id="portafolio-icon" title="Visit my Portafolio"/></a>
+    </aside>
+    <main>
+
+        <section>      
+            <h1>Weather App written entirely on Javascript Vanilla</h1>   
+            <div class="paragraph">
+            <p>Fill the blank fields below to fetch the data</p>
+            </div>
+
+            <div id="inputData">
+                <label>City: </label>
+                <input type="text" placeholder="Enter a City's Name" id="cityInput" required/>
+                
+                <label>Country: </label>
+                <input type="text" placeholder="Enter a Country's Name" id="countryInput" required/>    
+
+                <button id="getWeatherButton">Get Weather</button>
+            
+                <div class="paragraph">
+                    <p id="warningNotification"></p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+        <section id="outputData">
+            <header>
+                <p id="place"></p>
+            </header>
+            <div id="weather">
+                <div>
+                    <figure><img id="tempIcon"/></figure>
+                    <p id="cityTemperature"></p>
+                </div>
+                <div>
+                    <ul id="tempAverage">
+                        <li>Max:</li>
+                        <li id="cityMaxTemperature"></li>
+                        <li>Min:</li>
+                        <li id="cityMinTemperature"></li>
+                    </ul>
+                </div>
+            </div>
+            <p id="cityTempDescription"></p>
+        </section>
+        </section>
+    </main>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

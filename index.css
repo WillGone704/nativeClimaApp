@@ -1,0 +1,216 @@
+*{
+    margin: 0px;
+    font-family: Sans;
+    --width-flex: 40% - 90;
+}
+body{
+    background: url('./assets/weather-wallpaper.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+aside{
+    background-color: #2b2b2b;
+    padding: 5px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+}
+
+aside img{
+    padding: 5px;
+    margin-bottom: 30px;
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+main{
+    height: 628px;
+    background: linear-gradient(rgb(248, 214, 214,0.6)5%,rgba(255, 98, 137,0.6)35%,rgb(164, 0, 197,0.6)) ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+}
+
+h1{
+    font-size: 25pt;
+    margin-left: calc(20% - 100px);
+}
+
+main section:nth-child(1){
+    width: 100%;
+    margin: auto;
+    align-self: flex-start;
+}
+
+main section:nth-child(2){
+    width: 100%;
+    align-self: flex-start;
+    justify-self: center;
+}
+
+#outputData{
+    max-width: 250px;
+    background-color: rgb(209, 209, 209);
+    padding: 15px;
+    border-radius: 20px;
+    margin: auto;
+    opacity: 0;
+}
+
+#outputData div{
+    display: flex;
+}
+
+#outputData p{
+    text-align: center;
+    font-weight: bold;
+}
+#outputData header{
+    color: #2b2b2b;
+    background-color: #00c5a3;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 280px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    top: -15px;
+    left: -15px;
+    z-index: 2;
+}
+#weather{
+    margin-top: 10px;
+}
+#weather div:nth-child(1){
+    display: block;
+    margin-top: 20px;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+#weather div:nth-child(1) figure{
+    margin-left: 40px;
+}
+
+#tempAverage{
+    list-style: none;
+    color: transparent;
+    padding: 5px;
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+#tempAverage li:nth-child(1) , li:nth-child(3){
+    padding-top: 10px; 
+    border-bottom: 1px solid #2b2b2b;
+}
+
+#tempAverage li:nth-child(2) , li:nth-child(4){
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#inputData{
+    background-color: rgb(238, 238, 238);
+    border-radius: 20px;
+    text-align: center;
+    height: 65px;
+    max-width: 1000px;
+    margin-left: calc(20% - 100px);
+}
+
+#inputData button{
+    background-color: rgb(164, 0, 197);
+    color: white;
+    font-weight: bolder;
+    float: right;
+    width: 200px;
+    height: 65px;
+    border: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#inputData button:hover{
+    background-color: rgb(192, 109, 209);
+}
+
+#inputData button:active{
+    background-color: rgb(115, 70, 124);
+}
+#inputData input{
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 3px;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.paragraph{
+    margin-left: calc(20% - 100px);
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px){
+    h1{
+        font-size: 14pt;
+        margin-left: calc(20% - 2px);
+    }
+    .paragraph{
+        font-size: 11pt;
+        margin-left: calc(20% - 2px);
+    }
+    #inputData{
+        font-size: 12px;
+        margin-left: calc(20% - 2px);
+        margin-right: 10px;
+        height: 150px;
+    }
+    #inputData input{
+        height: 20px;
+        margin-left: 2px;
+        font-size: 11pt;
+    }
+    #inputData button{
+        width: 150px;
+        height: 40px;
+        border-radius: 15px;
+        margin-top: 10px;
+        float: none;
+    }
+    #outputData{
+        max-width: 250px;
+        margin-left: calc(26% - 20px);
+    }
+    main{height: 667px;}
+}
+
+@media only screen and (max-width: 768px){
+    h1{
+        margin-left: calc(15% - 20px)
+    }
+    .paragraph{
+        margin-left: calc(15% - 20px);
+    }
+    #inputData{
+        margin-left: calc(15% - 20px);
+        margin-right: 10px;
+    }
+    
+    #inputData button{
+        width: 90px;
+        text-align: center;
+    }
+    
+    #inputData input{
+        font-size: 10.5pt;
+        width: 150px;
+    }
+}
